@@ -1,0 +1,96 @@
+/* Animated Gradient Background */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  color: #e0f7fa;
+  text-align: center;
+  background: #9c27b0; /* purple */
+  background: radial-gradient(circle, rgba(156, 39, 176, 1) 0%, rgba(103, 58, 183, 1) 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Flex Layout */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 10px;
+  background: rgba(74, 20, 140, 0.5); /* purple tone */
+  z-index: 10;
+  position: relative;
+}
+
+.header-text {
+  max-width: 600px;
+}
+
+.header-photo .my-photo {
+  width: 140px;      /* adjusted size */
+  height: 180px;     /* adjusted size */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(74, 20, 140, 0.4); /* purple shadow */
+}
+
+/* Navigation Buttons */
+nav {
+  margin: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.nav-btn {
+  margin: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #e1bee7aa, #d1c4e9cc); /* light purple gradient */
+  color: #4a148c; /* dark purple */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  animation: bounce 2s infinite;
+}
+
+.nav-btn:hover {
+  background: #e1bee7; /* light purple */
+  transform: scale(1.05);
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Main Section */
+main {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.07);
+  margin: 20px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(74, 20, 140, 0.5); /* purple */
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: auto;
+}
